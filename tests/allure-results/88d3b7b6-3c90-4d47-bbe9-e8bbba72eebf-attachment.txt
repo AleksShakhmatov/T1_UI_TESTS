@@ -1,0 +1,5 @@
+{'level': 'SEVERE', 'message': 'https://www.google.com/recaptcha/api.js?render=6LcbnuIhAAAAAFavZ4PnKh79fbU9M5ipz3HEcwle - Failed to load resource: the server responded with a status of 400 ()', 'source': 'network', 'timestamp': 1727984367470}
+{'level': 'SEVERE', 'message': 'https://t1.ru/none/ - Failed to load resource: the server responded with a status of 404 (Not Found)', 'source': 'network', 'timestamp': 1727984367658}
+{'level': 'SEVERE', 'message': 'https://t1.ru/bitrix/cache/js/s2/t1-new/template_2ef7cd2cf305372adb4db5092adcc025/template_2ef7cd2cf305372adb4db5092adcc025_v1.js?1727864168214727 - Failed to load resource: the server responded with a status of 403 (Forbidden)', 'source': 'network', 'timestamp': 1727984367855}
+{'level': 'SEVERE', 'message': 'https://burp/favicon.ico - Failed to load resource: net::ERR_NAME_NOT_RESOLVED', 'source': 'network', 'timestamp': 1727984368069}
+{'level': 'SEVERE', 'message': 'https://zap/favicon.ico - Failed to load resource: net::ERR_NAME_NOT_RESOLVED', 'source': 'network', 'timestamp': 1727984368069}
