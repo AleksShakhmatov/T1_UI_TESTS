@@ -102,7 +102,7 @@ class HomePage:
         browser.open('')
         if browser.element('[class ="b-block-cookie-notice__text"]'):
             browser.element('[class ="b-block-cookie-notice__text"]').click()
-        browser.element('[id="swiper-wrapper-6892d5e094245e5c"]').perform(
+        browser.element('[class="c-large-button colorbox-form-pd"]').perform(
                 command.js.scroll_into_view).should(be.visible)
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[12]/span").should(
                 have.text('Презентация о холдинге'))
