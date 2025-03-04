@@ -87,17 +87,6 @@ class HomePage:
         browser.element('[id="footer-tel"]').should(have.text('+7 495 727-09-85'))
         browser.element('[id="footer-mail"]').should(have.text('info@t1.ru'))
 
-    @allure.step('Проверка спектра решений')
-    def check_solutions(self):
-        browser.open('')
-        browser.element('[class ="b-block-cookie-notice__text"]').click()
-        browser.element('[class = "h3"]').perform(command.js.scroll_into_view).should(be.visible)
-        browser.element("a[href*='/solutions/services/oblachnye-servisy/']").should(
-            have.text('Облачные сервисы'))
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[4]").click()
-        browser.element('[class ="b-layout__main-content"]').should(have.text('Облачные сервисы'))
-        browser.driver.back()
-
     @allure.step('Проверка элемента презентации')
     def check_presentation(self):
         browser.open('')
@@ -108,6 +97,17 @@ class HomePage:
         browser.element('[class ="c-large-button colorbox-form-pd"]').click()
         browser.element('[class ="b-form__title c-h3"]').should(have.text('Презентация о Холдинге Т1'))
         browser.element('[id="tao-form-PresentDownload"]').should(have.text('Скачать презентацию'))
+        browser.driver.back()
+
+    @allure.step('Проверка спектра решений')
+    def check_solutions(self):
+        browser.open('')
+        browser.element('[class ="b-block-cookie-notice__text"]').click()
+        browser.element('[class = "h3"]').perform(command.js.scroll_into_view).should(be.visible)
+        browser.element("a[href*='/solutions/services/oblachnye-servisy/']").should(
+            have.text('Облачные сервисы'))
+        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[4]").click()
+        browser.element('[class ="b-layout__main-content"]').should(have.text('Облачные сервисы'))
         browser.driver.back()
 
 
