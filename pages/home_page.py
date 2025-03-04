@@ -112,3 +112,4 @@ class HomePage:
 
 
 home_page = HomePage()
+

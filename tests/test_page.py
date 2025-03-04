@@ -68,3 +68,4 @@ class TestHomePage:
     @allure.story('Тест элемента презентации')
     def test_check_presentation(self):
         home_page.check_presentation()
+
