@@ -90,7 +90,7 @@ class HomePage:
     @allure.step('Проверка элемента презентации')
     def check_presentation(self):
         browser.open('')
-        browser.element('[class="b-block-announcement"]').perform(
+        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[12]/span").perform(
                 command.js.scroll_into_view).should(be.visible)
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[12]/span").should(
                 have.text('Презентация о холдинге'))
