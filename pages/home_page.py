@@ -100,13 +100,13 @@ class HomePage:
     @allure.step('Проверка элемента презентации')
     def check_presentation(self):
         browser.open('')
-        browser.element('[class="c-large-button colorbox-form-pd"]').perform(
-                command.js.scroll_into_view).should(be.visible)
-        if browser.element('[class ="b-block-cookie-notice__text"]'):
+        if browser.element(css_or_xpath_or_by="/html/body/div[3]/div[2]/div/div[2]/span"):
             browser.element('[class ="b-block-cookie-notice__text"]').click()
+        browser.element('[class="b-block-announcement"]').perform(
+                command.js.scroll_into_view).should(be.visible)
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[12]/span").should(
                 have.text('Презентация о холдинге'))
-        browser.element('[class ="c-large-button colorbox-form-pd"]').click()
+        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[12]/span").click()
         browser.element('[class ="b-form__title c-h3"]').should(have.text('Презентация о Холдинге Т1'))
         browser.element('[id="tao-form-PresentDownload"]').should(have.text('Скачать презентацию'))
         browser.driver.back()
