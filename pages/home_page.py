@@ -6,7 +6,7 @@ class HomePage:
 
     @allure.step('Открываем главную страницу')
     def open_home_page(self):
-        browser.open(''
+        browser.open('')
         assert browser.get(query.url) == 'https://t1.ru/'
 
     @allure.step('Проверка хэдера')
@@ -112,7 +112,7 @@ class HomePage:
 
     @allure.step('Проверка спектра решений')
     def check_solutions(self):
-        browser.open('')
+        browser.open(''
         if browser.element('[class ="b-block-cookie-notice__text"]'):
             browser.element('[class ="b-block-cookie-notice__text"]').click()
         browser.element('[class ="b-block-cookie-notice__text"]').click()
