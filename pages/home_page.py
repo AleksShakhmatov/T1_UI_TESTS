@@ -110,7 +110,6 @@ class HomePage:
         browser.element('[class ="b-form__title c-h3"]').should(have.text('Презентация о Холдинге Т1'))
         browser.element('[id="tao-form-PresentDownload"]').should(have.text('Скачать презентацию'))
         browser.driver.back()
-        browser.driver.back()
 
     @allure.step('Проверка спектра решений')
     def check_solutions(self):
