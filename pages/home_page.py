@@ -173,7 +173,6 @@ class HomePage:
             have.text('Сервисы и ИТ-аутсорсинг'))
         browser.driver.back()
         browser.element('[class ="b-block-cookie-notice__text"]').click()
-        browser.element('[class ="b-block-cookie-notice__text"]').click()
         browser.element('[class = "h3"]').perform(command.js.scroll_into_view).should(be.visible)
         browser.element("a[href*='/solutions/services/tsifrovoy-i-it-konsalting/']").should(
             have.text('Цифровой и ИТ-консалтинг'))
