@@ -154,6 +154,7 @@ class HomePage:
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
             have.text('Цифровой и ИТ-консалтинг'))
         browser.driver.back()
+        browser.element("a[href*='/solutions/services/informatsionnaya-bezopasnost/').perform(command.js.scroll_into_view).should(be.visible)
         browser.element("a[href*='/solutions/services/informatsionnaya-bezopasnost/']").should(
             have.text('Информационная безопасность'))
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[9]").click()
