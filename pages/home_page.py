@@ -12,8 +12,6 @@ class HomePage:
     @allure.step('Проверка хэдера')
     def check_header_content(self):
         browser.open('')
-        if browser.element('[class ="b-block-cookie-notice__text"]'):
-            browser.element('[class ="b-block-cookie-notice__text"]').click()
         browser.element('[class="b-header__menu"]').should(have.text('Холдинг'))
         browser.element(css_or_xpath_or_by="/html/body/div[3]/header/div/div/div[2]/div[2]/div[1]/a").click()
         browser.element('[class="b-layout__main-content"]').should(have.text('О Холдинге Т1'))
@@ -113,8 +111,7 @@ class HomePage:
     @allure.step('Проверка спектра решений')
     def check_solutions(self):
         browser.open('')
-        if browser.element('[class ="b-block-cookie-notice__close"]'):
-            browser.element('[class ="b-block-cookie-notice__close"]').click()
+        browser.element('[class ="b-block-cookie-notice__close"]').click()
         browser.element('[class = "h3"]').perform(command.js.scroll_into_view).should(be.visible)
         browser.element("a[href*='/solutions/services/oblachnye-servisy/']").should(
             have.text('Облачные сервисы'))
