@@ -118,77 +118,66 @@ class HomePage:
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[4]").click()
         browser.element('[class ="b-layout__main-content"]').should(have.text('Облачные сервисы'))
         browser.driver.back()
-        browser.element('[class = "h3"]').perform(command.js.scroll_into_view).should(be.visible)
         browser.element("a[href*='/solutions/services/vychislitelnye-kompleksy-i-khranilishcha-dannykh/']").should(
             have.text('Вычислительные комплексы и хранилища данных'))
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[1]").click()
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
             have.text('Вычислительные комплексы и хранилища данных'))
         browser.driver.back()
-        browser.element('[class = "h3"]').perform(command.js.scroll_into_view).should(be.visible)
         browser.element("a[href*='/solutions/services/zakaznaya-razrabotka-po/']").should(
             have.text('Заказная разработка ПО'))
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[2]").click()
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
             have.text('Заказная разработка ПО'))
         browser.driver.back()
-        browser.element('[class = "h3"]').perform(command.js.scroll_into_view).should(be.visible)
         browser.element("a[href*='/solutions/services/bolshie-dannye-klientskiy-opyt-i-ai-ml/']").should(
             have.text('Большие данные, клиентский опыт и AI/ML'))
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[11]").click()
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
             have.text('Большие данные, клиентский опыт и AI/ML'))
         browser.driver.back()
-        browser.element('[class = "h3"]').perform(command.js.scroll_into_view).should(be.visible)
         browser.element("a[href*='/solutions/services/avtomatizatsiya-i-robotizatsiya-biznes-protsessov/']").should(
             have.text('Автоматизация и роботизация бизнес-процессов'))
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[10]").click()
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
             have.text('Автоматизация и роботизация бизнес-процессов'))
         browser.driver.back()
-        browser.element('[class = "h3"]').perform(command.js.scroll_into_view).should(be.visible)
         browser.element("a[href*='/solutions/services/servisy-i-autsorsing/']").should(
             have.text('Сервисы и ИТ-аутсорсинг'))
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[5]").click()
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
             have.text('Сервисы и ИТ-аутсорсинг'))
         browser.driver.back()
-        browser.element('[class = "h3"]').perform(command.js.scroll_into_view).should(be.visible)
         browser.element("a[href*='/solutions/services/tsifrovoy-i-it-konsalting/']").should(
             have.text('Цифровой и ИТ-консалтинг'))
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[8]").click()
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
             have.text('Цифровой и ИТ-консалтинг'))
         browser.driver.back()
-        browser.element('[class = "h3"]').perform(command.js.scroll_into_view).should(be.visible)
         browser.element("a[href*='/solutions/services/informatsionnaya-bezopasnost/']").should(
             have.text('Информационная безопасность'))
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[9]").click()
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
             have.text('Информационная безопасность'))
         browser.driver.back()
-        browser.element('[class = "h3"]').perform(command.js.scroll_into_view).should(be.visible)
         browser.element("a[href*='/solutions/services/upravlenie-it-infrastrukturoy/']").should(
             have.text('Управление ИТ-инфраструктурой'))
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[12]").click()
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
             have.text('Управление ИТ-инфраструктурой'))
         browser.driver.back()
-        browser.element('[class = "h3"]').perform(command.js.scroll_into_view).should(be.visible)
         browser.element("a[href*='/solutions/services/inzhenernaya-infrastruktura-tsod/']").should(
             have.text('Инженерная инфраструктура, ЦОД'))
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[7]").click()
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
             have.text('Инженерная инфраструктура, ЦОД'))
         browser.driver.back()
-        browser.element('[class = "h3"]').perform(command.js.scroll_into_view).should(be.visible)
         browser.element("a[href*='/solutions/services/setevye-i-kommunikatsionnye-resheniya/']").should(
             have.text('Сетевые и коммуникационные решения'))
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[6]").click()
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
             have.text('Сетевые и коммуникационные решения'))
         browser.driver.back()
-        browser.element('[class = "h3"]').perform(command.js.scroll_into_view).should(be.visible)
         browser.element("a[href*='/solutions/services/promyshlennyy-inzhiniring-i-iot/']").should(
             have.text('Промышленный инжиниринг и IoT'))
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[3]").click()
