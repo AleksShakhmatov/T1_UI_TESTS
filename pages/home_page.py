@@ -113,18 +113,12 @@ class HomePage:
     @allure.step('Проверка спектра решений')
     def check_solutions(self):
         browser.open('')
-        if browser.element('[class ="b-block-cookie-notice__text"]'):
-            browser.element('[class ="b-block-cookie-notice__text"]').click()
-        browser.element('[class ="b-block-cookie-notice__text"]').click()
         browser.element('[class = "h3"]').perform(command.js.scroll_into_view).should(be.visible)
         browser.element("a[href*='/solutions/services/oblachnye-servisy/']").should(
             have.text('Облачные сервисы'))
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[4]").click()
         browser.element('[class ="b-layout__main-content"]').should(have.text('Облачные сервисы'))
         browser.driver.back()
-        if browser.element('[class ="b-block-cookie-notice__text"]'):
-            browser.element('[class ="b-block-cookie-notice__text"]').click()
-        browser.element('[class ="b-block-cookie-notice__text"]').click()
         browser.element('[class = "h3"]').perform(command.js.scroll_into_view).should(be.visible)
         browser.element("a[href*='/solutions/services/vychislitelnye-kompleksy-i-khranilishcha-dannykh/']").should(
             have.text('Вычислительные комплексы и хранилища данных'))
@@ -132,9 +126,6 @@ class HomePage:
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
             have.text('Вычислительные комплексы и хранилища данных'))
         browser.driver.back()
-        if browser.element('[class ="b-block-cookie-notice__text"]'):
-            browser.element('[class ="b-block-cookie-notice__text"]').click()
-        browser.element('[class ="b-block-cookie-notice__text"]').click()
         browser.element('[class = "h3"]').perform(command.js.scroll_into_view).should(be.visible)
         browser.element("a[href*='/solutions/services/zakaznaya-razrabotka-po/']").should(
             have.text('Заказная разработка ПО'))
@@ -142,19 +133,12 @@ class HomePage:
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
             have.text('Заказная разработка ПО'))
         browser.driver.back()
-        if browser.element('[class ="b-block-cookie-notice__text"]'):
-            browser.element('[class ="b-block-cookie-notice__text"]').click()
-        browser.element('[class ="b-block-cookie-notice__text"]').click()
         browser.element('[class = "h3"]').perform(command.js.scroll_into_view).should(be.visible)
         browser.element("a[href*='/solutions/services/bolshie-dannye-klientskiy-opyt-i-ai-ml/']").should(
             have.text('Большие данные, клиентский опыт и AI/ML'))
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[11]").click()
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
             have.text('Большие данные, клиентский опыт и AI/ML'))
-        browser.driver.back()
-        if browser.element('[class ="b-block-cookie-notice__text"]'):
-            browser.element('[class ="b-block-cookie-notice__text"]').click()
-        browser.element('[class ="b-block-cookie-notice__text"]').click()
         browser.element('[class = "h3"]').perform(command.js.scroll_into_view).should(be.visible)
         browser.element("a[href*='/solutions/services/avtomatizatsiya-i-robotizatsiya-biznes-protsessov/']").should(
             have.text('Автоматизация и роботизация бизнес-процессов'))
@@ -162,9 +146,6 @@ class HomePage:
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
             have.text('Автоматизация и роботизация бизнес-процессов'))
         browser.driver.back()
-        if browser.element('[class ="b-block-cookie-notice__text"]'):
-            browser.element('[class ="b-block-cookie-notice__text"]').click()
-        browser.element('[class ="b-block-cookie-notice__text"]').click()
         browser.element('[class = "h3"]').perform(command.js.scroll_into_view).should(be.visible)
         browser.element("a[href*='/solutions/services/servisy-i-autsorsing/']").should(
             have.text('Сервисы и ИТ-аутсорсинг'))
@@ -172,7 +153,6 @@ class HomePage:
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
             have.text('Сервисы и ИТ-аутсорсинг'))
         browser.driver.back()
-        browser.element('[class ="b-block-cookie-notice__text"]').click()
         browser.element('[class = "h3"]').perform(command.js.scroll_into_view).should(be.visible)
         browser.element("a[href*='/solutions/services/tsifrovoy-i-it-konsalting/']").should(
             have.text('Цифровой и ИТ-консалтинг'))
@@ -180,9 +160,6 @@ class HomePage:
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
             have.text('Цифровой и ИТ-консалтинг'))
         browser.driver.back()
-        if browser.element('[class ="b-block-cookie-notice__text"]'):
-            browser.element('[class ="b-block-cookie-notice__text"]').click()
-        browser.element('[class ="b-block-cookie-notice__text"]').click()
         browser.element('[class = "h3"]').perform(command.js.scroll_into_view).should(be.visible)
         browser.element("a[href*='/solutions/services/informatsionnaya-bezopasnost/']").should(
             have.text('Информационная безопасность'))
@@ -190,9 +167,6 @@ class HomePage:
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
             have.text('Информационная безопасность'))
         browser.driver.back()
-        if browser.element('[class ="b-block-cookie-notice__text"]'):
-            browser.element('[class ="b-block-cookie-notice__text"]').click()
-        browser.element('[class ="b-block-cookie-notice__text"]').click()
         browser.element('[class = "h3"]').perform(command.js.scroll_into_view).should(be.visible)
         browser.element("a[href*='/solutions/services/upravlenie-it-infrastrukturoy/']").should(
             have.text('Управление ИТ-инфраструктурой'))
@@ -200,9 +174,6 @@ class HomePage:
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
             have.text('Управление ИТ-инфраструктурой'))
         browser.driver.back()
-        if browser.element('[class ="b-block-cookie-notice__text"]'):
-            browser.element('[class ="b-block-cookie-notice__text"]').click()
-        browser.element('[class ="b-block-cookie-notice__text"]').click()
         browser.element('[class = "h3"]').perform(command.js.scroll_into_view).should(be.visible)
         browser.element("a[href*='/solutions/services/inzhenernaya-infrastruktura-tsod/']").should(
             have.text('Инженерная инфраструктура, ЦОД'))
@@ -210,9 +181,6 @@ class HomePage:
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
             have.text('Инженерная инфраструктура, ЦОД'))
         browser.driver.back()
-        if browser.element('[class ="b-block-cookie-notice__text"]'):
-            browser.element('[class ="b-block-cookie-notice__text"]').click()
-        browser.element('[class ="b-block-cookie-notice__text"]').click()
         browser.element('[class = "h3"]').perform(command.js.scroll_into_view).should(be.visible)
         browser.element("a[href*='/solutions/services/setevye-i-kommunikatsionnye-resheniya/']").should(
             have.text('Сетевые и коммуникационные решения'))
@@ -220,9 +188,6 @@ class HomePage:
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
             have.text('Сетевые и коммуникационные решения'))
         browser.driver.back()
-        if browser.element('[class ="b-block-cookie-notice__text"]'):
-            browser.element('[class ="b-block-cookie-notice__text"]').click()
-        browser.element('[class ="b-block-cookie-notice__text"]').click()
         browser.element('[class = "h3"]').perform(command.js.scroll_into_view).should(be.visible)
         browser.element("a[href*='/solutions/services/promyshlennyy-inzhiniring-i-iot/']").should(
             have.text('Промышленный инжиниринг и IoT'))
