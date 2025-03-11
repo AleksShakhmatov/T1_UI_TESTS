@@ -7,6 +7,7 @@ class HomePage:
     @allure.step('Открываем главную страницу')
     def open_home_page(self):
         browser.open('')
+        browser.element(css_or_xpath_or_by="/html/body/div[3]/div[2]/div/div[2]/span").click()
         assert browser.get(query.url) == 'https://t1.ru/'
 
     @allure.step('Проверка хэдера')
@@ -62,8 +63,7 @@ class HomePage:
     @allure.step('Проверка обратной связи')
     def feedback(self):
         browser.open('')
-        if browser.element('[class ="b-block-cookie-notice__text"]'):
-            browser.element('[class ="b-block-cookie-notice__text"]').click()
+        browser.element(css_or_xpath_or_by="/html/body/div[3]/div[2]/div/div[2]/span").click()
         browser.element('[class="b-header__button"]').should(have.text('Написать нам'))
         browser.element('[class="b-header__button"]').click()
         browser.element('[id="cboxLoadedContent"]').should(have.text('Написать нам'))
@@ -72,8 +72,6 @@ class HomePage:
     @allure.step('Проверка заявки на открытые школы')
     def check_open_school(self):
         browser.open('')
-        if browser.element('[class ="b-block-cookie-notice__text"]'):
-            browser.element('[class ="b-block-cookie-notice__text"]').click()
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/a/div/div/video").click()
         browser.element('[class ="b-layout__main-content"]').should(have.text('Открытые школы T1'))
         browser.element('[class ="link btn-blue js-link"]').should(
@@ -86,8 +84,6 @@ class HomePage:
     @allure.step('Проверка футера')
     def check_footer(self):
         browser.open('')
-        if browser.element('[class ="b-block-cookie-notice__text"]'):
-            browser.element('[class ="b-block-cookie-notice__text"]').click()
         browser.element("a[href='https://habr.com/ru/company/T1Holding/']").should(
             be.visible)
         browser.element("a[href='https://t.me/T1Holding']").should(
