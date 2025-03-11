@@ -129,6 +129,7 @@ class HomePage:
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[11]").click()
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
             have.text('Большие данные, клиентский опыт и AI/ML'))
+        browser.open('')
         browser.element("a[href*='/solutions/services/avtomatizatsiya-i-robotizatsiya-biznes-protsessov/']").should(
             have.text('Автоматизация и роботизация бизнес-процессов'))
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[10]").click()
