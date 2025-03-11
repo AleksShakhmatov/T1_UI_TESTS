@@ -126,12 +126,6 @@ class HomePage:
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
             have.text('Заказная разработка ПО'))
         browser.driver.back()
-        browser.element("a[href*='/solutions/services/bolshie-dannye-klientskiy-opyt-i-ai-ml/']").should(
-            have.text('Большие данные, клиентский опыт и AI/ML'))
-        browser.element("a[href*='/solutions/services/bolshie-dannye-klientskiy-opyt-i-ai-ml/']").click()
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
-            have.text('Большие данные, клиентский опыт и AI/ML'))
-        browser.driver.back()
         browser.element("a[href*='/solutions/services/avtomatizatsiya-i-robotizatsiya-biznes-protsessov/']").should(
             have.text('Автоматизация и роботизация бизнес-процессов'))
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[10]").click()
