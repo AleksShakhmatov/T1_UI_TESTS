@@ -131,7 +131,7 @@ class HomePage:
             have.text('Заказная разработка ПО'))
         browser.driver.back()
         if browser.element(css_or_xpath_or_by="/html/body/div[3]/div[2]/div/div[2]/span").should(
-            have.text('Согласен'))
+            have.text('Согласен')):
 	    browser.element(css_or_xpath_or_by="/html/body/div[3]/div[2]/div/div[2]/span").click()
         browser.element("a[href*='/solutions/services/bolshie-dannye-klientskiy-opyt-i-ai-ml/']").should(
             have.text('Большие данные, клиентский опыт и AI/ML'))
