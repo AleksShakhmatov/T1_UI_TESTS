@@ -11,6 +11,10 @@ def setup_browser():
     browser.config.window_height = 1080
     browser.config.window_width = 1920
     options = Options()
+    options.add_argument("--disable-gpu")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--incognito")
     selenoid_capabilities = {
         "browserName": "chrome",
         "browserVersion": "120.0",
