@@ -7,7 +7,6 @@ class HomePage:
     @allure.step('Открываем главную страницу')
     def open_home_page(self):
         browser.open('')
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/div[2]/div/div[2]/span").click()
         assert browser.get(query.url) == 'https://t1.ru/'
 
     @allure.step('Проверка хэдера')
