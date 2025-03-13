@@ -1,3 +1,5 @@
+from inspect import Attribute
+
 import allure
 from selene import browser, have, query, be, command
 
@@ -145,7 +147,7 @@ class HomePage:
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
             have.text('Инженерная инфраструктура, ЦОД'))
         browser.driver.back()
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[6]").click()
+        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[6]").perform(command.js.click)
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
             have.text('Сетевые и коммуникационные решения'))
         browser.driver.back()
