@@ -88,7 +88,6 @@ class HomePage:
     @allure.step('Проверка спектра решений')
     def check_solutions(self):
         browser.open('')
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/div[2]/div/div[2]/span").click()
         browser.element('[class = "b-block-services__items"]').perform(command.js.scroll_into_view).should(be.visible)
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[4]").click()
         browser.element('[class ="b-layout__main-content"]').should(have.text('Облачные сервисы'))
