@@ -129,7 +129,7 @@ class HomePage:
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
             have.text('Инженерная инфраструктура, ЦОД'))
         browser.driver.back()
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[6]").click()
+        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[6]").perform(command.js.click)
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
             have.text('Сетевые и коммуникационные решения'))
         browser.driver.back()
@@ -151,7 +151,6 @@ class HomePage:
     @allure.step('Проверка футера')
     def check_footer(self):
         browser.open('')
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/div[2]/div/div[2]/span").click()
         browser.element('[class = "b-footer__bottom"]').perform(command.js.scroll_into_view).should(be.visible)
         browser.element("a[href*='https://www.e-disclosure.ru/portal/company.aspx?id=38924']").should(
             have.text('Раскрытие информации на сайте агентства «Интерфакс»'))
