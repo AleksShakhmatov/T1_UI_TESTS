@@ -41,14 +41,6 @@ class TestHomePage:
     @allure.severity(Severity.CRITICAL)
     @allure.label("owner", "AleksSH")
     @allure.feature("Работа элементов сайта")
-    @allure.story('Тест спектра решений')
-    def test_check_solutions(self):
-        home_page.check_solutions()
-
-    @allure.tag("web")
-    @allure.severity(Severity.CRITICAL)
-    @allure.label("owner", "AleksSH")
-    @allure.feature("Работа элементов сайта")
     @allure.story('Тест подачи заявки на открытые школы')
     def test_check_open_school(self):
         home_page.check_open_school()
@@ -57,15 +49,31 @@ class TestHomePage:
     @allure.severity(Severity.CRITICAL)
     @allure.label("owner", "AleksSH")
     @allure.feature("Работа элементов сайта")
-    @allure.story('Тест футера')
-    def test_check_footer(self):
-        home_page.check_footer()
+    @allure.story('Тест элемента презентации')
+    def test_check_presentation(self):
+        home_page.check_presentation()
 
     @allure.tag("web")
     @allure.severity(Severity.CRITICAL)
     @allure.label("owner", "AleksSH")
     @allure.feature("Работа элементов сайта")
-    @allure.story('Тест элемента презентации')
-    def test_check_presentation(self):
-        home_page.check_presentation()
+    @allure.story('Тест спектра решений')
+    def test_check_solutions(self):
+        home_page.check_solutions()
+
+    @allure.tag("web")
+    @allure.severity(Severity.CRITICAL)
+    @allure.label("owner", "AleksSH")
+    @allure.feature("Работа элементов сайта")
+    @allure.story('Тест наличия соцсетей')
+    def test_check_social_network(self):
+        home_page.check_social_network()
+
+    @allure.tag("web")
+    @allure.severity(Severity.CRITICAL)
+    @allure.label("owner", "AleksSH")
+    @allure.feature("Работа элементов сайта")
+    @allure.story('Тест футера')
+    def test_check_footer(self):
+        home_page.check_footer()
     
