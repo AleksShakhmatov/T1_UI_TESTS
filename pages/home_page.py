@@ -78,10 +78,8 @@ class HomePage:
     @allure.step('Проверка элемента презентации')
     def check_presentation(self):
         browser.open('')
-        if browser.element('[class ="b-block-cookie-notice__close"]').should(be.visible):
-            browser.element('[class ="b-block-cookie-notice__close"]').click()
-        else:
-            browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[12]/span").perform(
+        browser.element('[class ="b-block-cookie-notice__close"]').click()
+        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[12]/span").perform(
                 command.js.scroll_into_view).should(be.visible)
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[12]/span").should(
             have.text('Презентация о холдинге'))
