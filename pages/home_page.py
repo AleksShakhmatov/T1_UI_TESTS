@@ -47,6 +47,7 @@ class HomePage:
         browser.element('[class="b-header__menu"]').should(have.text('Пресс-центр'))
         browser.element(css_or_xpath_or_by="/html/body/div[3]/header/div/div/div[2]/div[2]/div[9]/a").click()
         browser.element('[class="b-layout__main-content"]').should(have.text('Пресс-центр'))
+
     @allure.step('Проверка строки поиска')
     def search(self):
         browser.open('')
@@ -77,8 +78,11 @@ class HomePage:
     @allure.step('Проверка элемента презентации')
     def check_presentation(self):
         browser.open('')
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[12]/span").perform(
-            command.js.scroll_into_view).should(be.visible)
+        if browser.element('[class ="b-block-cookie-notice__close"]').should(be.visible):
+            browser.element('[class ="b-block-cookie-notice__close"]').click()
+        else:
+            browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[12]/span").perform(
+                command.js.scroll_into_view).should(be.visible)
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[12]/span").should(
             have.text('Презентация о холдинге'))
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[12]/span").click()
@@ -89,42 +93,42 @@ class HomePage:
     def check_solutions(self):
         browser.open('')
         browser.element('[class = "b-block-services__items"]').perform(command.js.scroll_into_view).should(be.visible)
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[4]").click()
+        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[4]").perform(command.js.click)
         browser.element('[class ="b-layout__main-content"]').should(have.text('Облачные сервисы'))
         browser.driver.back()
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[1]").click()
+        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[1]").perform(command.js.click)
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
             have.text('Вычислительные комплексы и хранилища данных'))
         browser.driver.back()
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[2]").click()
+        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[2]").perform(command.js.click)
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
             have.text('Заказная разработка ПО'))
         browser.driver.back()
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[11]").click()
+        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[11]").perform(command.js.click)
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
             have.text('Большие данные, клиентский опыт и AI/ML'))
         browser.driver.back()
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[10]").click()
+        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[10]").perform(command.js.click)
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
             have.text('Автоматизация и роботизация бизнес-процессов'))
         browser.driver.back()
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[5]").click()
+        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[5]").perform(command.js.click)
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
             have.text('Сервисы и ИТ-аутсорсинг'))
         browser.driver.back()
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[8]").click()
+        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[8]").perform(command.js.click)
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
             have.text('Цифровой и ИТ-консалтинг'))
         browser.driver.back()
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[9]").click()
+        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[9]").perform(command.js.click)
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
             have.text('Информационная безопасность'))
         browser.driver.back()
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[12]").click()
+        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[12]").perform(command.js.click)
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
             have.text('Управление ИТ-инфраструктурой'))
         browser.driver.back()
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[7]").click()
+        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[7]").perform(command.js.click)
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
             have.text('Инженерная инфраструктура, ЦОД'))
         browser.driver.back()
@@ -132,7 +136,7 @@ class HomePage:
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
             have.text('Сетевые и коммуникационные решения'))
         browser.driver.back()
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[3]").click()
+        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[3]").perform(command.js.click)
         browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
             have.text('Промышленный инжиниринг и IoT'))
 
