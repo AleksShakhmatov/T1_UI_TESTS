@@ -1,3 +1,5 @@
+import time
+
 import allure
 from selene import browser, have, query, be, command
 
@@ -88,79 +90,68 @@ class HomePage:
     def check_solutions(self):
         browser.open('')
         browser.element(".b-block-services__items").perform(command.js.scroll_into_view).should(be.visible)
-        browser.element(".b-menu-header__link[href='/news/']").click()
-        browser.element(".b-block-services__map-map[href='/solutions/services/vychislitelnye-kompleksy-i"
-                        "-khranilishcha-dannykh/']").click()
-
-
-
-
-
-
-
-
-        browser.element(".b-block-services__map-map[href='/solutions/services/zakaznaya-razrabotka-po/']").click()
-        browser.element('[class ="b-layout__main-content"]').should(have.text('Облачные сервисы'))
-        browser.driver.back()
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[1]").perform(command.js.click)
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
+        browser.element("[data-id='1']").perform(command.js.click)
+        browser.element(".b-layout__main-content").should(
             have.text('Вычислительные комплексы и хранилища данных'))
         browser.driver.back()
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[2]").perform(command.js.click)
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
+        browser.element("[data-id='2']").perform(command.js.click)
+        browser.element(".b-layout__main-content").should(
             have.text('Заказная разработка ПО'))
         browser.driver.back()
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[11]").perform(command.js.click)
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
+        browser.element("[data-id='4']").perform(command.js.click)
+        browser.element(".b-layout__main-content").should(have.text('Облачные сервисы'))
+        browser.driver.back()
+        browser.element("[data-id='12']").perform(command.js.click)
+        browser.element(".b-layout__main-content").should(
             have.text('Большие данные, клиентский опыт и AI/ML'))
         browser.driver.back()
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[10]").perform(command.js.click)
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
+        browser.element("[data-id='11']").perform(command.js.click)
+        browser.element(".b-layout__main-content").should(
             have.text('Автоматизация и роботизация бизнес-процессов'))
         browser.driver.back()
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[5]").perform(command.js.click)
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
+        browser.element("[data-id='5']").perform(command.js.click)
+        browser.element(".b-layout__main-content").should(
             have.text('Сервисы и ИТ-аутсорсинг'))
         browser.driver.back()
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[8]").perform(command.js.click)
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
+        browser.element("[data-id='9']").perform(command.js.click)
+        browser.element(".b-layout__main-content").should(
             have.text('Цифровой и ИТ-консалтинг'))
         browser.driver.back()
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[9]").perform(command.js.click)
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
+        browser.element("[data-id='10']").perform(command.js.click)
+        browser.element(".b-layout__main-content").should(
             have.text('Информационная безопасность'))
         browser.driver.back()
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[12]").perform(command.js.click)
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
+        browser.element("[data-id='13']").perform(command.js.click)
+        browser.element(".b-layout__main-content").should(
             have.text('Управление ИТ-инфраструктурой'))
         browser.driver.back()
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[7]").perform(command.js.click)
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
+        browser.element("[data-id='8']").perform(command.js.click)
+        browser.element(".b-layout__main-content").should(
             have.text('Инженерная инфраструктура, ЦОД'))
         browser.driver.back()
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[6]").perform(command.js.click)
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
+        browser.element("[data-id='6']").perform(command.js.click)
+        browser.element(".b-layout__main-content").should(
             have.text('Сетевые и коммуникационные решения'))
         browser.driver.back()
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/div[2]/div/map/area[3]").perform(command.js.click)
-        browser.element(css_or_xpath_or_by="/html/body/div[3]/main/div[2]/h1").should(
+        browser.element("[data-id='3']").perform(command.js.click)
+        browser.element(".b-layout__main-content").should(
             have.text('Промышленный инжиниринг и IoT'))
 
     @allure.step('Проверка соцсетей')
     def check_social_network(self):
         browser.open('')
-        browser.element('[class = "b-socials"]').perform(command.js.scroll_into_view).should(be.visible)
+        browser.element(".b-socials").perform(command.js.scroll_into_view).should(be.visible)
         browser.element("a[href='https://habr.com/ru/company/T1Holding/']").should(
             be.visible)
         browser.element("a[href='https://t.me/T1Holding']").should(
             be.visible)
-        browser.element('[id="footer-tel"]').should(have.text('+7 495 727-09-85'))
-        browser.element('[id="footer-mail"]').should(have.text('info@t1.ru'))
+        browser.element("#footer-tel").should(have.text('+7 495 727-09-85'))
+        browser.element("#footer-mail").should(have.text('info@t1.ru'))
 
     @allure.step('Проверка футера')
     def check_footer(self):
         browser.open('')
-        browser.element('[class = "b-footer__bottom"]').perform(command.js.scroll_into_view).should(be.visible)
+        browser.element(".b-footer__bottom").perform(command.js.scroll_into_view).should(be.visible)
         browser.element("a[href*='https://www.e-disclosure.ru/portal/company.aspx?id=38924']").should(
             have.text('Раскрытие информации на сайте агентства «Интерфакс»'))
         browser.element("a[href*='/compliance/']").should(have.text('Комплаенс'))
@@ -169,11 +160,11 @@ class HomePage:
         browser.element("a[href*='/documents/license_agreement/']").should(have.text(
             'Пользовательское соглашение при использовании сайта'))
         browser.element("a[href*='/it-accreditation/']").should(have.text('ИТ-аккредитация'))
-        browser.element('[class = "b-footer__bottom"]').should(have.text('Холдинг Т1 © 2011–2025'))
-        browser.element('a[class="b-footer__copyright-lebedev-logo"]').should(have.attribute('href', "https://www.artlebedev.ru/"))
-        browser.element('[class="b-footer__bottom-right"]').should(have.text('Задизайнено в Студии Артемия Лебедева'))
+        browser.element(".b-footer__bottom").should(have.text('Холдинг Т1 © 2011–2025'))
+        browser.element(".b-footer__copyright-lebedev-logo").should(have.attribute('href', "https://www.artlebedev.ru/"))
+        browser.element(".b-footer__bottom-right").should(have.text('Задизайнено в Студии Артемия Лебедева'))
         browser.element("a[href*='https://www.artlebedev.ru/t1/site2/']").should(have.text('Информация о сайте'))
-        browser.element('[class="b-footer__copyright-techart"]').should(have.text('Web-дизайн, разработка сайта — Текарт'))
+        browser.element(".b-footer__copyright-techart").should(have.text('Web-дизайн, разработка сайта — Текарт'))
 
 
 home_page = HomePage()
