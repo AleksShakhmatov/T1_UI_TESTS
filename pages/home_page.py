@@ -82,7 +82,7 @@ class HomePage:
         browser.open('')
         browser.element(".c-large-button").perform(command.js.scroll_into_view).should(be.visible)
         browser.element(".c-large-button").should(have.text('Презентация о холдинге'))
-        browser.element(".c-large-button").perform(command.js.click)
+        browser.element(".c-large-button").click()
         browser.element(".b-form__title").should(have.text('Презентация о Холдинге Т1'))
         browser.element("#tao-form-PresentDownload").should(have.text('Скачать презентацию'))
 
