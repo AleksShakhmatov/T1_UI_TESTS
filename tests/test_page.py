@@ -25,7 +25,7 @@ class TestHomePage:
     @allure.severity(Severity.CRITICAL)
     @allure.label("owner", "AleksSH")
     @allure.feature("Работа элементов сайта")
-    @allure.story('Тест поискового поля"')
+    @allure.story('Тест поискового поля')
     def test_search(self):
         home_page.search()
 
