@@ -126,5 +126,5 @@ pytest .
 ## <img width="40" height="40" style="vertical-align:middle" title="Selenoid" src="media/logo/Selenoid.svg"> Видео отчет запуска тестов (Selenoid)
 
 <p align="center">
-  <img title="Selenoid Video" src="media/gifs/T1.gif">
+  <img title="Selenoid Video" src="media/gifs/Т1.gif">
 </p>
