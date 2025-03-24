@@ -18,6 +18,10 @@
 |:----------------------------------------------------------|------------------------------------------------------------|-----------------------------------------------------------|-----------------------------------------------------------|-------------------------------------------------------------|------------------------------------------------------------|------------------------------------------------------------------|-------------------------------------------------------------------|------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------:|
 | <img height="50" src="media/logo/Python.png" width="50"/> | <img height="50" src="media/logo/Pycharm.png" width="50"/> | <img height="50" src="media/logo/GitHub.svg" width="50"/> | <img height="50" src="media/logo/Pytest.png" width="50"/> | <img height="50" src="media/logo/Selenide.png" width="50"/> | <img height="50" src="media/logo/Selene.png" width="50"/>  | <img height="50" src="media/logo/Allure_Report.svg" width="50"/> | <img height="50" src="media\logo\Allure_TestOps.svg" width="50"/> | <img height="50" src="media/logo/Jenkins.svg" width="50"/> | <img height="50" src="media/logo/Jira.svg" width="50"/> | <img height="50" src="media\logo\Telegram.svg" width="50"/> |
 
+Тесты в проекте написаны на языке <code>Python</code> с использованием фреймворка  [Selene](https://github.com/yashaka/selene).
+При прогоне тестов для удалённого запуска браузеров используется [Selenoid](https://aerokube.com/selenoid/).
+Для удаленного запуска реализована сборка в <code>Jenkins</code> с формированием Allure-отчета и отправкой результатов в <code>Telegram</code> при помощи бота. Также реализована интеграция с <code>Allure TestOps</code> и <code>Jira</code>.
+
 
 <a id="chek"></a> 
 ##  <img width="40" height="40" style="vertical-align:middle" title="List" src="media/images/todo.png"> Реализованные проверки
@@ -49,18 +53,18 @@ pip install -r requirements.txt
 pytest .
 ```
 <a id="build"></a> 
-## <img width="40" height="40" style="vertical-align:middle" title="Jenkins" src="media/logo/Jenkins.svg"> Сборка в Jenkins
+## <img width="40" height="40" style="vertical-align:middle" title="Jenkins" src="media/logo/Jenkins.svg"> [Сборка в Jenkins](https://jenkins.autotests.cloud/job/SH_Diploma_IT1_UI_TESTS(PY)/)
 
 Для запуска сборки необходимо перейти в раздел **"Build with Parameters"** и нажать кнопку **"Build Now"**.
 <p align="center">
 <img title="Jenkins Build" src="media/screenshots/JenkinsBuild.png"> 
 </p>
 
-После выполнения сборки, в блоке **Build History** напротив номера сборки появятся значки <img src="media\logo\Allure_TestOps.svg" width="15" height="15">
+После выполнения сборки, в блоке **Builds** напротив номера сборки появятся значки <img src="media\logo\Allure_TestOps.svg" width="15" height="15">
 и <img src="media\logo\Allure_Report.svg" width="15" height="15"> , при клике на которые откроются соответствующие
 артефакты.  
 
-## <img width="40" height="40" style="vertical-align:middle" title="Allure Report" src="media/logo/Allure_Report.svg"> Интеграция с Allure
+## <img width="40" height="40" style="vertical-align:middle" title="Allure Report" src="media/logo/Allure_Report.svg"> [Интеграция с Allure](https://jenkins.autotests.cloud/job/SH_Diploma_IT1_UI_TESTS(PY)/allure/)
 
 <a id="report"></a> 
 ### Allure отчет
@@ -74,7 +78,7 @@ pytest .
 <img title="Jenkins Build" src="media/screenshots/Allure Report2.png">    
 </p>       
 
-## <img width="40" height="40" style="vertical-align:middle" title="Allure TestOps" src="media/logo/Allure_TestOps.svg"> Интеграция с Allure TestOps
+## <img width="40" height="40" style="vertical-align:middle" title="Allure TestOps" src="media/logo/Allure_TestOps.svg"> [Интеграция с Allure TestOps](https://allure.autotests.cloud/launch/45361)
           
 
 <a id="testops"></a>
@@ -100,7 +104,7 @@ pytest .
 
 
 <a id="jira"></a> 
-## <img width="40" height="40" style="vertical-align:middle" title="Jira" src="media/logo/Jira.svg"> Интеграция с Jira
+## <img width="40" height="40" style="vertical-align:middle" title="Jira" src="media/logo/Jira.svg"> [Интеграция с Jira](https://jira.autotests.cloud/browse/HOMEWORK-1422)
 
 
 <p align="center">
@@ -113,7 +117,7 @@ pytest .
 <img title="Test cases and cycles" src="media/screenshots/Jira1.png">
 </p>
 
-## <img width="40" height="40" style="vertical-align:middle" title="Telegram" src="media/logo/Telegram.svg"> Уведомления в Telegram через бота
+## <img width="40" height="40" style="vertical-align:middle" title="Telegram" src="media/logo/Telegram.svg"> [Уведомления в Telegram через бота](https://t.me/HW16Notification)
 
 
 <a id="telegram"></a> 
@@ -123,7 +127,7 @@ pytest .
 
 
 <a id="video"></a> 
-## <img width="40" height="40" style="vertical-align:middle" title="Selenoid" src="media/logo/Selenoid.svg"> Видео отчет запуска тестов (Selenoid)
+## <img width="40" height="40" style="vertical-align:middle" title="Selenoid" src="media/logo/Selenoid.svg"> [Видео отчет запуска тестов (Selenoid)](https://selenoid.autotests.cloud/video/23222f8afcdec3aaf196795d5d775dfa.mp4)
 
 <p align="center">
   <img title="Selenoid Video" src="media/gifs/Т1.gif">
