@@ -24,9 +24,12 @@
 - Проверка открытия нужного сайта
 - Проверка контента хедера
 - Проверка поиска
+- Проверка области программы найма
+- Проверка презентации
+- Проверка спектра цифровых решений и услуг
 - Проверка обратной связи
-- Проверка информации о холдинге
-- Проверка информации о пресс-центре
+- Проверка социальных сетей и контактов
+- Проверка контента футера
 
 <a id="engine"></a> 
 ## <img width="40" height="40" style="vertical-align:middle" title="Play" src="media/images/play.jpg"> Запуск автотестов
@@ -48,7 +51,7 @@ pytest .
 <a id="build"></a> 
 ## <img width="40" height="40" style="vertical-align:middle" title="Jenkins" src="media/logo/Jenkins.svg"> Сборка в Jenkins
 
-Для запуска сборки необходимо перейти в раздел **"Build with Parameters"** и нажать кнопку **"Build"**.
+Для запуска сборки необходимо перейти в раздел **"Build with Parameters"** и нажать кнопку **"Build Now"**.
 <p align="center">
 <img title="Jenkins Build" src="media/screenshots/JenkinsBuild.png"> 
 </p>
@@ -102,6 +105,12 @@ pytest .
 
 <p align="center">
 <img title="Jira Task" src="media/screenshots/Jira.png">
+</p>
+
+#### Тест кейсы и прогоны
+
+<p align="center">
+<img title="Test cases and cycles" src="media/screenshots/Jira1.png">
 </p>
 
 ## <img width="40" height="40" style="vertical-align:middle" title="Telegram" src="media/logo/Telegram.svg"> Уведомления в Telegram через бота

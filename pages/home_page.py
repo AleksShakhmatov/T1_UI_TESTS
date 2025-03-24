@@ -68,9 +68,9 @@ class HomePage:
         with allure.step("Клик на строку поиска"):
             browser.element('[name="q"]').click()
         with allure.step("Ввод данных"):
-            browser.element('[name="q"]').type('2024').press_enter()
+            browser.element('[name="q"]').type('2025').press_enter()
         with allure.step("Провекра введенных данных"):
-            browser.element(".b-layout__main-content").should(have.text('2024'))
+            browser.element(".b-layout__main-content").should(have.text('2025'))
 
     @allure.step('Проверка обратной связи')
     def feedback(self):
